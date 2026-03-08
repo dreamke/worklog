@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作汇报 - 2026年2月26日~3月6日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .summary {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .summary h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .summary-item {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .summary-item .number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .summary-item .label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card h3 .date {
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+        .card h3 .weekday {
+            color: #999;
+            font-size: 0.8em;
+            font-weight: normal;
+        }
+        .task-list {
+            list-style: none;
+        }
+        .task-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .task-list li:last-child {
+            border-bottom: none;
+        }
+        .task-list li::before {
+            content: "▸";
+            color: #667eea;
+            font-weight: bold;
+        }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            margin-right: 5px;
+        }
+        .tag-done { background: #d4edda; color: #155724; }
+        .tag-pending { background: #fff3cd; color: #856404; }
+        .tag-meeting { background: #cce5ff; color: #004085; }
+        .tag-maintenance { background: #f8d7da; color: #721c24; }
+        .staff-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        .staff-table th, .staff-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .staff-table th {
+            background: #f8f9ff;
+            color: #667eea;
+        }
+        .staff-table td:first-child {
+            font-weight: bold;
+            color: #333;
+        }
+        .section-title {
+            color: #667eea;
+            margin: 30px 0 15px;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+        }
+        .footer {
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            margin-top: 40px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 工作汇报</h1>
+            <p>2026年2月26日 ~ 2026年3月6日 · 第三周</p>
+        </div>
+
+        <div class="summary">
+            <h2>📊 周度概览</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="number">10</div>
+                    <div class="label">工作天数</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number">15+</div>
+                    <div class="label">参与人员</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number">20+</div>
+                    <div class="label">完成任务</div>
+                </div>
+                <div class="summary-item">
+                    <div class="number">5</div>
+                    <div class="label">重要会议</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📌 重点工作摘要</h2>
+            <ul class="task-list">
+                <li><span class="tag tag-pending">待完成</span>复产前现场检查整改要求通知</li>
+                <li><span class="tag tag-done">已完成</span>B级区物料传递清单</li>
+                <li><span class="tag tag-done">已完成</span>轧盖机模具打磨安装测试</li>
+                <li><span class="tag tag-done">已完成</span>控制间整理/上位机维护重启</li>
+                <li><span class="tag tag-done">已完成</span>CR-00381/EC 文件起草</li>
+                <li><span class="tag tag-maintenance">维修中</span>赋码系统故障维修</li>
+                <li><span class="tag tag-maintenance">维修中</span>层析电导波动校准</li>
+                <li><span class="tag tag-meeting">会议</span>2026年国家局审计准备工作启动</li>
+                <li><span class="tag tag-meeting">会议</span>计划3月12日灭菌柜厂家现场培训</li>
+                <li><span class="tag tag-meeting">会议</span>3月9日药品管理法实施条例培训</li>
+            </ul>
+        </div>
+
+        <h3 class="section-title">📅 每日详情</h3>
+
+        <div class="card">
+            <h3>2026-3-6 <span class="weekday">周五</span></h3>
+            <ul class="task-list">
+                <li>复产前现场检查整改要求通知（未完成）</li>
+                <li>文件审批：CAPA文件签批、层流报告修订</li>
+                <li>安排赋码系统维修：单一来源请示已发起、报修单、委外申请</li>
+                <li>下周手套完整性测试仪维修确认</li>
+                <li>会议：3月12日下午2点半灭菌柜厂家现场培训</li>
+                <li>会议：3月9日下午2点药品管理法实施条例培训</li>
+                <li>故障：层析电导波动，下周一下午需重新校准</li>
+            </ul>
+            <table class="staff-table">
+                <tr><th>人员</th><th>工作安排</th></tr>
+                <tr><td>李迪迪</td><td>文件审批，委外流程</td></tr>
+                <tr><td>薛战魁</td><td>膜片及软管信息核对</td></tr>
+                <tr><td>饶苇浩</td><td>休假</td></tr>
+                <tr><td>刘建明</td><td>移动罐探头处理</td></tr>
+                <tr><td>皮富明</td><td>投浆陪产</td></tr>
+                <tr><td>吴积辉</td><td>投浆陪产</td></tr>
+                <tr><td>胡丰年</td><td>下午处理灭菌柜蒸汽阀门处保温封板</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>2026-3-5 <span class="weekday">周四</span></h3>
+            <ul class="task-list">
+                <li>复产前现场检查整改要求通知（未完成）</li>
+                <li>文件审批：CAPA文件签批、层流报告修订</li>
+                <li>设备报警关键性分级（发给姜工提出升版文件）</li>
+                <li>备件增加层析备件</li>
+                <li>灭菌柜蒸汽阀门处保温封板需处理</li>
+                <li>车间房顶打胶太高</li>
+                <li>会议：计划3月12日灭菌柜厂家现场培训</li>
+                <li>会议：下午1点易制毒化学品安全培训</li>
+                <li>故障：配液CIP清洗问题，切换板手阀未打开</li>
+                <li>故障：CIP 6#7泵启动程序调整完成</li>
+                <li>故障：赋码系统故障维修</li>
+            </ul>
+            <table class="staff-table">
+                <tr><th>人员</th><th>工作安排</th></tr>
+                <tr><td>李迪迪</td><td>委外流程、文件</td></tr>
+                <tr><td>薛战魁</td><td>分装生产保障</td></tr>
+                <tr><td>饶苇浩</td><td>赋码系统故障维修</td></tr>
+                <tr><td>刘建明</td><td>移动罐探头处理</td></tr>
+                <tr><td>皮富明</td><td>包装生产保障，赋码系统故障维修</td></tr>
+                <tr><td>吴积辉</td><td>QC冰箱带供应商维修，移动罐探头处理</td></tr>
+                <tr><td>张轶秋</td><td>更新CIP 6#7泵启动程序</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>2026-3-4 <span class="weekday">周三</span></h3>
+            <ul class="task-list">
+                <li><span class="tag tag-done">完成</span>B级区物料传递清单</li>
+                <li><span class="tag tag-done">完成</span>轧盖机模具打磨安装测试</li>
+                <li>复产前现场检查整改要求通知（未完成）</li>
+                <li>文件审批：CAPA文件修订、层流报告计划明天</li>
+                <li><span class="tag tag-done">完成</span>控制间整理/上位机维护重启</li>
+                <li>设备报警关键性分级（未完成）</li>
+                <li><span class="tag tag-done">完成</span>CR-00381/EC 文件起草</li>
+                <li>计划3月12日进行灭菌柜厂家现场培训</li>
+                <li>故障：CIP6回水清洗受阻，检查阀门正常</li>
+                <li>故障：CIP 6#7泵启动程序需要调整计划明天执行</li>
+            </ul>
+            <table class="staff-table">
+                <tr><th>人员</th><th>工作安排</th></tr>
+                <tr><td>李迪迪</td><td>委外流程、文件</td></tr>
+                <tr><td>薛战魁</td><td>轧盖机模具打磨安装维修</td></tr>
+                <tr><td>饶苇浩</td><td>CIP6阀门检查，下午更换CIP6泵机封</td></tr>
+                <tr><td>刘建明</td><td>N/A</td></tr>
+                <tr><td>皮富明</td><td>包装生产陪产，下午更换CIP6泵机封</td></tr>
+                <tr><td>吴积辉</td><td>包装生产陪产</td></tr>
+                <tr><td>张轶秋</td><td>下午进行控制间整理/上位机维护重启</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>2026-3-3 <span class="weekday">周二</span></h3>
+            <ul class="task-list">
+                <li>3月初提备件需求</li>
+                <li>轧盖机生产观察</li>
+                <li>分离气管更换准备</li>
+                <li>文件签字：CAPA已打印、层流报告→潘</li>
+                <li>轧盖机分装现场跟踪</li>
+                <li>2026年国家局审计准备工作通知 --SME清单，偏差清单需复核</li>
+                <li>报警管理需增加关键性分级</li>
+                <li>层析供应商到厂换柱</li>
+                <li>会议：党委专题会议，14:00 武汉厅</li>
+                <li>故障：轧盖机出瓶传感器故障，调整后恢复</li>
+                <li>故障：轧盖机模具需打磨处理，明天上午打磨后传入</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>2026-3-2 <span class="weekday">周一</span></h3>
+            <ul class="task-list">
+                <li>3月初提备件需求</li>
+                <li>轧盖机异响维修</li>
+                <li>卫生检查</li>
+                <li>工程部所属区域卫生检查 9:00</li>
+                <li>文件签字：移交表签字完成、CAPA已打印、层流报告HOLD</li>
+                <li>轧盖机异响检查已调整，待明日分装现场跟踪</li>
+                <li>生产自检缺陷，包装赋码系统澄清</li>
+                <li>2026年国家局审计准备工作通知</li>
+                <li>员工座谈会议</li>
+                <li>故障：分装上位机打印机报错，更换墨盒恢复</li>
+                <li>故障：轧盖机异响检查调整</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>2026-2-28 <span class="weekday">周六</span></h3>
+            <ul class="task-list">
+                <li>3月初提备件需求</li>
+                <li>故障维修</li>
+                <li>MF报餐</li>
+                <li>CCS确认→招议标培训之后</li>
+                <li>文件签字：移交表签字、CAPA已打印、层流报告HOLD</li>
+                <li>招议标培训</li>
+                <li>2026年国家局审计准备工作通知</li>
+                <li>故障：超滤压力问题，超滤流量计问题</li>
+                <li>故障：206罐称重问题</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>2026-2-27 <span class="weekday">周五</span></h3>
+            <ul class="task-list">
+                <li>3月初提备件需求</li>
+                <li>维修间及办公室进行卫生清洁</li>
+                <li>3月排班计划提出</li>
+                <li>车间检查 9:00：
+                    <br>· 冷库一楼防撞条打胶 → 胡
+                    <br>· 接收区安全（梯子、主管信息更新） → 周超
+                    <br>· 灭菌柜钩子密封焊接 → 薛
+                    <br>· 隧道压差现场确认
+                </li>
+                <li>文件签字：移交部分签字、CAPA已打印、层流报告HOLD</li>
+                <li>CCS确认→与占协调时间沟通</li>
+                <li>多效蒸馏水机内部取样点增加日常取样</li>
+                <li>2026年国家局审计准备工作通知</li>
+                <li>楼梯间建筑材料清理</li>
+                <li>故障：206罐子称重度数不稳→张工进车间检查</li>
+                <li>故障：配液天平打印机故障--更换QC打印机</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>2026-2-26 <span class="weekday">周四</span></h3>
+            <ul class="task-list">
+                <li>会议传达（办公例会）</li>
+                <li>QC废液处理项目安排</li>
+                <li>维修间旧管道清理</li>
+                <li>CCS内容复核 → 胡/翟内容确认，发占玲约时间沟通</li>
+                <li>CAPA升版文件更新</li>
+                <li>停产移交控制表进行签批</li>
+                <li>部门例会 13:00：
+                    <br>· 文件签字（移交）、CAPA升版文件、CCS
+                    <br>· 维护计划签批、台账签批
+                    <br>· 停产项目关闭/验收/维修记录复核
+                    <br>· UPS台账清单
+                    <br>· MF 2月28日执行
+                    <br>· 信息化项目进度更新汇报
+                    <br>· 2000元内委外采购流程更新
+                </li>
+                <li>会议待办：图纸更新、文件提前更新、3月份备件采购</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>🦞 工作汇报自动生成 · 2026年3月</p>
+        </div>
+    </div>
+</body>
+</html>
