@@ -10,85 +10,105 @@
             font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             min-height: 100vh;
-            padding: 40px 20px;
+            padding: 20px;
             color: #333;
         }
-        .container { max-width: 1100px; margin: 0 auto; }
+        .container { max-width: 1400px; margin: 0 auto; }
         
-        .header {
-            text-align: center;
+        /* 顶部天气 */
+        .weather-bar {
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
             color: white;
-            margin-bottom: 40px;
-            animation: fadeInDown 0.8s ease-out;
+            padding: 15px 30px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 32px rgba(0,212,255,0.3);
         }
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
+        .weather-bar h2 { font-size: 1.8rem; }
+        .weather-bar .info { font-size: 1.3rem; }
+        .weather-bar .update { opacity: 0.9; font-size: 0.9rem; }
+        
+        /* 双列布局 */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 25px;
         }
-        .header h1 { font-size: 2.8rem; margin-bottom: 10px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
-        .header .date { font-size: 1.3rem; opacity: 0.9; }
+        
+        .left-column { display: flex; flex-direction: column; gap: 25px; }
         
         .card {
             background: white;
             border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 25px;
+            padding: 25px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.15);
             animation: fadeInUp 0.6s ease-out;
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
         }
         .card:nth-child(2) { animation-delay: 0.1s; }
         .card:nth-child(3) { animation-delay: 0.2s; }
         
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
         .card-title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #1a1a2e;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
             border-bottom: 3px solid #e94560;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
-        .card-title .icon { font-size: 1.8rem; }
-        
-        /* 表格样式 */
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #eee; }
-        th { background: #f8f9fa; color: #555; font-weight: 600; }
-        tr:hover { background: #f8f9fa; }
-        .status-done { color: #10b981; font-weight: 600; }
-        .status-progress { color: #f59e0b; font-weight: 600; }
-        .status-pending { color: #6b7280; }
+        .card-title .icon { font-size: 1.6rem; }
         
         /* 行业报告样式 */
         .news-item {
-            padding: 18px;
+            padding: 15px;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             border-radius: 12px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             border-left: 4px solid #e94560;
         }
-        .news-item h3 { color: #1a1a2e; margin-bottom: 8px; font-size: 1.1rem; }
-        .news-item p { color: #666; line-height: 1.6; font-size: 0.95rem; }
+        .news-item h3 {
+            color: #1a1a2e;
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+        }
+        .news-item p { color: #666; line-height: 1.5; font-size: 0.9rem; }
+        .news-item .link { 
+            margin-top: 8px; 
+            font-size: 0.85rem; 
+        }
+        .news-item .link a { color: #7c3aed; text-decoration: none; }
+        .english {
+            color: #666;
+            font-style: italic;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px dashed #ddd;
+            font-size: 0.9rem;
+        }
         
         /* 热门话题样式 */
         .trending-item {
             display: flex;
             align-items: flex-start;
-            gap: 15px;
-            padding: 18px;
+            gap: 12px;
+            padding: 14px;
             background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
             border-radius: 12px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             border-left: 4px solid #f59e0b;
         }
         .trending-item .rank {
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             background: #f59e0b;
             color: white;
             border-radius: 50%;
@@ -97,155 +117,282 @@
             justify-content: center;
             font-weight: bold;
             flex-shrink: 0;
+            font-size: 0.9rem;
         }
-        .trending-item .content h3 { color: #1a1a2e; margin-bottom: 6px; }
-        .trending-item .content p { color: #666; line-height: 1.6; }
+        .trending-item .content h3 { color: #1a1a2e; margin-bottom: 5px; font-size: 1rem; }
+        .trending-item .content p { color: #666; line-height: 1.5; font-size: 0.9rem; }
+        .trending-item .link { 
+            margin-top: 6px; 
+            font-size: 0.8rem; 
+        }
+        .trending-item .link a { color: #7c3aed; text-decoration: none; }
+        .trending-item .english {
+            color: #555;
+            font-size: 0.85rem;
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px dashed #ddd;
+        }
         
-        .english { color: #666; font-style: italic; margin-top: 8px; padding-top: 8px; border-top: 1px dashed #ddd; }
+        .section-label {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+        .section-label.international { background: #3b82f6; }
+        
+        /* 工作汇总表格 */
+        table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.9rem; }
+        th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #f8f9fa; color: #555; font-weight: 600; font-size: 0.85rem; }
+        tr:hover { background: #f8f9fa; }
+        .status-done { color: #10b981; font-weight: 600; }
+        .status-progress { color: #f59e0b; font-weight: 600; }
+        .status-pending { color: #6b7280; }
         
         .footer {
             text-align: center;
             color: white;
-            margin-top: 40px;
+            margin-top: 30px;
             opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 1200px) {
+            .main-content { grid-template-columns: 1fr; }
+            .weather-bar { flex-direction: column; gap: 10px; text-align: center; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>📊 综合日报</h1>
-            <p class="date">2026年3月13日 星期五</p>
+        <!-- 顶部天气 -->
+        <div class="weather-bar">
+            <h2>📍 武汉</h2>
+            <div class="info">
+                <span>☀️ 晴</span>
+                <span style="margin: 0 15px;">17°C</span>
+                <span>💧 湿度 42%</span>
+            </div>
+            <div class="update">更新于 2026-03-13 19:30</div>
         </div>
 
-        <!-- 第一部分：行业报告 -->
-        <div class="card">
-            <h2 class="card-title"><span class="icon">📈</span> 行业动态 - AI制药设备管理</h2>
-            <div class="news-item">
-                <h3>1. Crusoe宣布新建模块化AI工厂</h3>
-                <p>Crusoe在科罗拉多州布鲁姆菲尔德建立"Spark Factory"，投资超2亿美元，生产模块化AI工厂Crusoe Spark™，可3个月交付。</p>
-            </div>
-            <div class="news-item">
-                <h3>2. AI赋能生物制药客户参与</h3>
-                <p>60%制药领导报告AI项目1年内2倍ROI。Optichannel营销可实现3倍处方量提升，将商业规划时间从18个月缩短到6个月。</p>
-            </div>
-            <div class="news-item">
-                <h3>3. WuXi Biologics获亚太卓越奖</h3>
-                <p>WuXi Biologics在2026年亚太生物制药卓越奖中获6项大奖+2项个人奖，PPQ成功率100%，通过46次监管检查。</p>
-            </div>
-            <div class="news-item">
-                <h3>4. JVCKENWOOD选择IFS Cloud</h3>
-                <p>JVCKENWOOD选择IFS Cloud作为下一代ERP和MES平台，计划2027年4月试点，实现工业AI实时数据驱动决策。</p>
-            </div>
-        </div>
+        <div class="main-content">
+            <!-- 左边：行业动态+热门话题 -->
+            <div class="left-column">
+                
+                <!-- 行业报告 -->
+                <div class="card">
+                    <h2 class="card-title"><span class="icon">📈</span> 行业动态 - AI制药设备管理</h2>
+                    
+                    <div class="news-item">
+                        <h3>1. Crusoe宣布新建模块化AI工厂</h3>
+                        <p>Crusoe在科罗拉多州布鲁姆菲尔德建立"Spark Factory"，投资超2亿美元，生产模块化AI工厂Crusoe Spark™，可3个月交付。</p>
+                        <div class="link">🔗 <a href="https://www.manilatimes.net/2026/03/12/tmt-newswire/globenewswire/crusoe-announces-new-manufacturing-facility-to-produce-modular-ai-factories/2299056" target="_blank">The Manila Times</a></div>
+                        <p class="english">Crusoe announced a new specialized manufacturing facility in Brighton, Colorado. Branded as the "Spark Factory," dedicated to producing Crusoe Spark™ modular AI factory with $200+ million investment.</p>
+                    </div>
+                    
+                    <div class="news-item">
+                        <h3>2. AI赋能生物制药客户参与</h3>
+                        <p>60%制药领导报告AI项目1年内2倍ROI。Optichannel营销可实现3倍处方量提升，将商业规划时间从18个月缩短到6个月。</p>
+                        <div class="link">🔗 <a href="https://pharmaphorum.com/sales-marketing/harnessing-ai-transform-end-end-customer-engagement-pharma-and-biotech" target="_blank">Pharmaphorum</a></div>
+                        <p class="english">Nearly six in 10 pharma leaders report seeing 2x ROI from AI initiatives within a year. Optichannel approaches deliver 3x average script lift and 80% higher HCP engagement rates.</p>
+                    </div>
+                    
+                    <div class="news-item">
+                        <h3>3. WuXi Biologics获亚太卓越奖</h3>
+                        <p>WuXi Biologics在2026年亚太生物制药卓越奖中获6项大奖+2项个人奖，PPQ成功率100%，通过46次监管检查。</p>
+                        <div class="link">🔗 <a href="https://www.biospace.com/press-releases/wuxi-biologics-wins-multiple-asia-pacific-biopharma-excellence-awards" target="_blank">BioSpace</a></div>
+                        <p class="english">WuXi Biologics won six prestigious awards and two individual leadership awards at the 2026 Asia-Pacific Biopharma Excellence Awards, achieving 100% success rate in PPQ campaigns.</p>
+                    </div>
+                    
+                    <div class="news-item">
+                        <h3>4. JVCKENWOOD选择IFS Cloud</h3>
+                        <p>JVCKENWOOD选择IFS Cloud作为下一代ERP和MES平台，计划2027年4月试点，实现工业AI实时数据驱动决策。</p>
+                        <div class="link">🔗 <a href="https://www.manilatimes.net/2026/03/12/tmt-newswire/pr-newswire/jvckenwood-corporation-selects-ifs-cloud-to-modernize-global-manufacturing-operations/2298854" target="_blank">The Manila Times</a></div>
+                        <p class="english">JVCKENWOOD selected IFS Cloud as its next-generation ERP and MES platform to enable Industrial AI for real-time, data-driven decision making.</p>
+                    </div>
+                </div>
 
-        <!-- 第二部分：工作日志 -->
-        <div class="card">
-            <h2 class="card-title"><span class="icon">💼</span> 本周工作汇总 (3月9日-13日)</h2>
-            <table>
-                <tr><th>日期</th><th>主要工作</th><th>状态</th></tr>
-                <tr>
-                    <td>周一 3/9</td>
-                    <td>复产前检查、赋码系统维修、层析电导校准、手套完整性测试仪确认</td>
-                    <td class="status-progress">进行中</td>
-                </tr>
-                <tr>
-                    <td>周二 3/10</td>
-                    <td>复产前整改完成、CAPA签批、层析电导校准完成、赋码系统测试</td>
-                    <td class="status-done">✓ 完成</td>
-                </tr>
-                <tr>
-                    <td>周三 3/11</td>
-                    <td>赋码跟踪、灭菌柜培训准备、工会代表大会、物料输送调整</td>
-                    <td class="status-done">✓ 完成</td>
-                </tr>
-                <tr>
-                    <td>周四 3/12</td>
-                    <td>灭菌柜现场培训、传递窗维修、赋码系统委外申请、温度探头检查</td>
-                    <td class="status-done">✓ 完成</td>
-                </tr>
-                <tr>
-                    <td>周五 3/13</td>
-                    <td>质量目标签订、分离信号干扰检查、配液温度探头故障待更换</td>
-                    <td class="status-progress">进行中</td>
-                </tr>
-            </table>
-            
-            <h3 style="margin-top: 25px; color: #1a1a2e;">📋 待处理任务</h3>
-            <table>
-                <tr><th>任务</th><th>负责人</th><th>状态</th></tr>
-                <tr><td>CR-00381/EC 隔膜阀膜片更换周期优化</td><td>-</td><td class="status-progress">月底关闭</td></tr>
-                <tr><td>CAPA-02524 分装地漏维修</td><td>-</td><td class="status-pending">待验收</td></tr>
-                <tr><td>层流报告修订</td><td>-</td><td class="status-pending">待签字</td></tr>
-                <tr><td>配液304-4温度探头更换</td><td>饶苇浩</td><td class="status-pending">待更换</td></tr>
-                <tr><td>分离罐称重信号检查</td><td>张工/饶工/吴工</td><td class="status-progress">周六测试</td></tr>
-            </table>
-            
-            <h3 style="margin-top: 25px; color: #1a1a2e;">👥 今日人员安排</h3>
-            <table>
-                <tr><th>人员</th><th>任务</th></tr>
-                <tr><td>李迪迪</td><td>委外流程</td></tr>
-                <tr><td>薛战魁</td><td>分装陪产、离线槽检查</td></tr>
-                <tr><td>饶苇浩</td><td>配液探头</td></tr>
-                <tr><td>刘建明</td><td>现场巡检</td></tr>
-                <tr><td>皮富明</td><td>中班、层析探头校准</td></tr>
-                <tr><td>吴积辉</td><td>包装陪产</td></tr>
-            </table>
-        </div>
+                <!-- 国内热门话题 -->
+                <div class="card">
+                    <h2 class="card-title"><span class="icon">🇨🇳</span> 国内热门话题</h2>
+                    
+                    <div class="trending-item">
+                        <div class="rank">1</div>
+                        <div class="content">
+                            <h3>特斯拉中国销量增长35%</h3>
+                            <p>2026年前两个月，特斯拉中国产电动车销量同比增长超35%，而比亚迪销量大幅下降。</p>
+                            <div class="link">🔗 <a href="https://www.cnbc.com/2026/03/13/teslas-china-sales-climb-in-the-first-two-months-of-2026-while-byd-numbers-drop.html" target="_blank">CNBC</a></div>
+                            <p class="english">Sales of Tesla's China-made EVs rose by more than 35% YoY in Jan-Feb 2026, while BYD's sales dropped significantly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trending-item">
+                        <div class="rank">2</div>
+                        <div class="content">
+                            <h3>中国银行加大科技贷款</h3>
+                            <p>中国银行优先向先进制造业、AI和生物技术领域提供贷款，北京加大AI推进力度。</p>
+                            <div class="link">🔗 <a href="https://www.reuters.com/business/finance/chinese-banks-boost-loans-tech-sector-beijing-ramps-up-ai-push-2026-03-12/" target="_blank">Reuters</a></div>
+                            <p class="english">Chinese banks prioritize tech sector loans, especially in advanced manufacturing, AI, and biotechnology, as Beijing ramps up AI push.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trending-item">
+                        <div class="rank">3</div>
+                        <div class="content">
+                            <h3>比亚迪销量下滑</h3>
+                            <p>2026年前两月比亚迪销量大幅下降，与特斯拉形成鲜明对比。</p>
+                            <div class="link">🔗 <a href="https://www.cnbc.com/2026/03/13/teslas-china-sales-climb-in-the-first-two-months-of-2026-while-byd-numbers-drop.html" target="_blank">CNBC</a></div>
+                            <p class="english">BYD's sales dropped significantly in the first two months of 2026 compared to Tesla's growth.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trending-item">
+                        <div class="rank">4</div>
+                        <div class="content">
+                            <h3>中国Agibot计划在欧洲生产机器人</h3>
+                            <p>中国Agibot计划在欧洲生产人形机器人，供应汽车行业。</p>
+                            <div class="link">🔗 <a href="#" target="_blank">Reuters</a></div>
+                            <p class="english">China's Agibot plans to produce humanoid robots in Europe for the auto industry.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trending-item">
+                        <div class="rank">5</div>
+                        <div class="content">
+                            <h3>宝马Neue Klasse电动车命运</h3>
+                            <p>宝马在中国市场的成功取决于Neue Klasse平台能否抵御中国电动车制造商的竞争。</p>
+                            <div class="link">🔗 <a href="https://www.autonews.com/bmw/ane-bmw-china-ix3-key-big-push-0313/" target="_blank">Automotive News</a></div>
+                            <p class="english">BMW's China success hinges on Neue Klasse platform competing against Chinese EV makers.</p>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- 第三部分：热门话题 -->
-        <div class="card">
-            <h2 class="card-title"><span class="icon">🔥</span> 热门话题 - 国内外动态</h2>
-            
-            <div class="trending-item">
-                <div class="rank">1</div>
-                <div class="content">
-                    <h3>Netflix确认《KPop Demon Hunters 2》回归</h3>
-                    <p>Netflix确认热门动画《KPop Demon Hunters》第二季即将回归，引发粉丝热议。</p>
-                    <p class="english">Netflix confirms KPop Demon Hunters 2 bringing the demon-hunting idols back.</p>
+                <!-- 国外热门话题 -->
+                <div class="card">
+                    <h2 class="card-title"><span class="icon">🌍</span> 国际热门话题</h2>
+                    
+                    <div class="trending-item">
+                        <div class="rank">1</div>
+                        <div class="content">
+                            <h3>美国AI任务计划Genesis Mission</h3>
+                            <p>Trump政府推动通过AI加速科学发现的Genesis Mission，计划培训10万科学家和工程师。</p>
+                            <div class="link">🔗 <a href="https://www.axios.com/2026/03/13/doe-dell-genesis-mission" target="_blank">Axios</a></div>
+                            <p class="english">The Trump administration pushes for accelerated scientific discovery through the Genesis Mission, a federal initiative to use AI for quantum computing and fusion power.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trending-item">
+                        <div class="rank">2</div>
+                        <div class="content">
+                            <h3>AI代理挑战北京数据政策</h3>
+                            <p>AI代理的崛起威胁中国在个人数据保护方面的平衡。</p>
+                            <div class="link">🔗 <a href="https://www.politico.com/newsletters/digital-future-daily/2026/03/12/the-rise-of-ai-agents-tests-beijings-playbook-00826002" target="_blank">Politico</a></div>
+                            <p class="english">The rise of AI agents tests Beijing's playbook on data privacy protection in China.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trending-item">
+                        <div class="rank">3</div>
+                        <div class="content">
+                            <h3>Netflix确认KPop Demon Hunters 2</h3>
+                            <p>Netflix确认热门动画《KPop Demon Hunters》第二季即将回归。</p>
+                            <div class="link">🔗 <a href="https://community.designtaxi.com/topic/24951-netflix-confirms-kpop-demon-hunters-2-bringing-the-demon-hunting-idols-back/" target="_blank">DesignTAXI</a></div>
+                            <p class="english">Netflix confirms KPop Demon Hunters 2 bringing the demon-hunting idols back.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trending-item">
+                        <div class="rank">4</div>
+                        <div class="content">
+                            <h3>Bella Hadid成为Prada全球美妆大使</h3>
+                            <p>超模Bella Hadid被任命为Prada首位全球美妆大使。</p>
+                            <div class="link">🔗 <a href="https://wwd.com/wwd-publications/digital-daily/2026-03-13-1238673658/" target="_blank">WWD</a></div>
+                            <p class="english">Bella Hadid named as Prada's first global beauty ambassador - a landmark fashion appointment.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="trending-item">
+                        <div class="rank">5</div>
+                        <div class="content">
+                            <h3>SXSW 2026影视首映</h3>
+                            <p>SXSW 2026公布15部值得期待的影视作品，包括《Scream 7》。</p>
+                            <div class="link">🔗 <a href="https://variety.com/lists/sxsw-2026-most-anticipated-movies-tv-shows/" target="_blank">Variety</a></div>
+                            <p class="english">SXSW 2026: 15 Film and TV Premieres including 'Scream 7' premiering at the festival.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="trending-item">
-                <div class="rank">2</div>
-                <div class="content">
-                    <h3>Bella Hadid成为Prada首位全球美妆大使</h3>
-                    <p>超模Bella Hadid被任命为Prada首位全球美妆大使，这是时尚界重要的人事任命。</p>
-                    <p class="english">Bella Hadid named as Prada's first global beauty ambassador - a landmark appointment in fashion.</p>
-                </div>
-            </div>
-            
-            <div class="trending-item">
-                <div class="rank">3</div>
-                <div class="content">
-                    <h3>SXSW 2026影视首映</h3>
-                    <p>SXSW 2026音乐电影节公布15部值得期待的影视作品，包括《Scream 7》等热门影片。</p>
-                    <p class="english">SXSW 2026: 15 Film and TV Premieres including 'Scream 7' premiering at the festival.</p>
-                </div>
-            </div>
-            
-            <div class="trending-item">
-                <div class="rank">4</div>
-                <div class="content">
-                    <h3>特朗普解除对俄罗斯石油制裁</h3>
-                    <p>特朗普决定解除对俄罗斯石油的制裁，引发市场关注。同时Chatbot开始涉足健康记录领域。</p>
-                    <p class="english">Trump removes sanctions on Russian oil, and chatbots show growing interest in accessing health records.</p>
-                </div>
-            </div>
-            
-            <div class="trending-item">
-                <div class="rank">5</div>
-                <div class="content">
-                    <h3>Google推出隐私工具</h3>
-                    <p>Google推出新的隐私工具，允许用户从搜索结果中删除不需要的个人信息。</p>
-                    <p class="english">Google introduces privacy tool to remove unwanted personal information from search results.</p>
-                </div>
+
+            <!-- 右边：工作汇总 -->
+            <div class="card">
+                <h2 class="card-title"><span class="icon">💼</span> 本周工作汇总</h2>
+                <p style="color:#666;margin-bottom:15px;">2026年3月9日-13日</p>
+                
+                <table>
+                    <tr><th>日期</th><th>工作内容</th><th>状态</th></tr>
+                    <tr>
+                        <td>周一 3/9</td>
+                        <td>复产前检查、赋码系统维修、层析电导校准</td>
+                        <td class="status-progress">进行中</td>
+                    </tr>
+                    <tr>
+                        <td>周二 3/10</td>
+                        <td>复产前整改完成、CAPA签批、层析校准完成</td>
+                        <td class="status-done">✓</td>
+                    </tr>
+                    <tr>
+                        <td>周三 3/11</td>
+                        <td>赋码跟踪、灭菌柜培训准备、工会代表大会</td>
+                        <td class="status-done">✓</td>
+                    </tr>
+                    <tr>
+                        <td>周四 3/12</td>
+                        <td>灭菌柜现场培训、传递窗维修、温度探头检查</td>
+                        <td class="status-done">✓</td>
+                    </tr>
+                    <tr>
+                        <td>周五 3/13</td>
+                        <td>质量目标签订、分离信号干扰检查</td>
+                        <td class="status-progress">进行中</td>
+                    </tr>
+                </table>
+                
+                <h3 style="margin-top:25px;color:#1a1a2e;">📋 待处理任务</h3>
+                <table>
+                    <tr><th>任务</th><th>状态</th></tr>
+                    <tr><td>CR-00381/EC 隔膜阀膜片更换</td><td class="status-progress">月底关闭</td></tr>
+                    <tr><td>CAPA-02524 分装地漏维修</td><td class="status-pending">待验收</td></tr>
+                    <tr><td>层流报告修订</td><td class="status-pending">待签字</td></tr>
+                    <tr><td>配液304-4温度探头更换</td><td class="status-pending">待更换</td></tr>
+                    <tr><td>分离罐称重信号检查</td><td class="status-progress">周六测试</td></tr>
+                </table>
+                
+                <h3 style="margin-top:25px;color:#1a1a2e;">👥 今日人员安排</h3>
+                <table>
+                    <tr><td>李迪迪</td><td>委外流程</td></tr>
+                    <tr><td>薛战魁</td><td>分装陪产</td></tr>
+                    <tr><td>饶苇浩</td><td>配液探头</td></tr>
+                    <tr><td>刘建明</td><td>现场巡检</td></tr>
+                    <tr><td>皮富明</td><td>中班、层析校准</td></tr>
+                    <tr><td>吴积辉</td><td>包装陪产</td></tr>
+                </table>
+                
+                <h3 style="margin-top:25px;color:#1a1a2e;">📅 会议安排</h3>
+                <p style="padding:12px;background:#f8f9fa;border-radius:8px;">
+                    <strong>3月16日 9:00</strong><br>
+                    党风廉政建设和反腐败工作会议
+                </p>
             </div>
         </div>
 
         <div class="footer">
-            <p>📅 汇总日期：2026年3月13日</p>
-            <p>工程部 · 持续关注行业动态</p>
+            <p>📅 汇总日期：2026年3月13日  |  工程部 · 持续关注行业动态</p>
         </div>
     </div>
 </body>
