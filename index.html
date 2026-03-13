@@ -1,188 +1,245 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>综合日报 2026-03-13</title>
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI','Microsoft YaHei',sans-serif; background: linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%); min-height: 100vh; padding: 20px; color: #333; }
-.container { max-width: 1400px; margin: 0 auto; }
-.weather-bar { background: linear-gradient(90deg,#00d4ff,#7c3aed); color: white; padding: 15px 30px; border-radius: 15px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
-.weather-bar h2 { font-size: 1.8rem; }
-.weather-bar .info { font-size: 1.3rem; }
-.weather-bar .update { opacity: 0.9; font-size: 0.9rem; }
-.main-content { display: grid; grid-template-columns: 1fr 400px; gap: 25px; }
-.left-column { display: flex; flex-direction: column; gap: 25px; }
-.card { background: white; border-radius: 20px; padding: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); animation: fadeInUp 0.6s ease-out; }
-@keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-.card-title { font-size: 1.4rem; color: #1a1a2e; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 3px solid #e94560; display: flex; align-items: center; gap: 10px; }
-.card-title .icon { font-size: 1.6rem; }
-.news-item { padding: 15px; background: linear-gradient(135deg,#f8f9fa,#e9ecef); border-radius: 12px; margin-bottom: 12px; border-left: 4px solid #e94560; }
-.news-item h3 { color: #1a1a2e; margin-bottom: 6px; font-size: 1.05rem; }
-.news-item p { color: #666; line-height: 1.5; font-size: 0.9rem; }
-.news-item .link, .trending-item .link { margin-top: 8px; font-size: 0.85rem; }
-.news-item .link a, .trending-item .link a { color: #7c3aed; text-decoration: none; }
-.english { color: #666; font-style: italic; margin-top: 8px; padding-top: 8px; border-top: 1px dashed #ddd; font-size: 0.9rem; }
-.trending-item { display: flex; align-items: flex-start; gap: 12px; padding: 14px; background: linear-gradient(135deg,#fff5f5,#fed7d7); border-radius: 12px; margin-bottom: 12px; border-left: 4px solid #f59e0b; }
-.trending-item .rank { width: 32px; height: 32px; background: #f59e0b; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.9rem; }
-.trending-item .content h3 { color: #1a1a2e; margin-bottom: 5px; font-size: 1rem; }
-.trending-item .content p { color: #666; line-height: 1.5; font-size: 0.9rem; }
-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.9rem; }
-th,td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
-th { background: #f8f9fa; color: #555; font-weight: 600; font-size: 0.85rem; }
-tr:hover { background: #f8f9fa; }
-.status-done { color: #10b981; font-weight: 600; }
-.status-progress { color: #f59e0b; font-weight: 600; }
-.status-pending { color: #6b7280; }
-.footer { text-align: center; color: white; margin-top: 30px; opacity: 0.8; font-size: 0.9rem; }
-@media(max-width:1200px){ .main-content{grid-template-columns:1fr} .weather-bar{flex-direction:column;gap:10px;text-align:center} }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合日报 2026年3月13日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI','Microsoft YaHei',sans-serif; background: linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%); min-height: 100vh; padding: 20px; color: #333; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .weather-bar { background: linear-gradient(90deg,#00d4ff,#7c3aed); color: white; padding: 15px 30px; border-radius: 15px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+        .weather-bar h2 { font-size: 1.8rem; }
+        .weather-bar .info { font-size: 1.3rem; }
+        .weather-bar .update { opacity: 0.9; font-size: 0.9rem; }
+        .main-content { display: grid; grid-template-columns: 1fr 400px; gap: 25px; }
+        .left-column { display: flex; flex-direction: column; gap: 25px; }
+        .card { background: white; border-radius: 20px; padding: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); }
+        .card-title { font-size: 1.4rem; color: #1a1a2e; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 3px solid #e94560; display: flex; align-items: center; gap: 10px; }
+        .card-title .icon { font-size: 1.6rem; }
+        .news-item { padding: 15px; background: linear-gradient(135deg,#f8f9fa,#e9ecef); border-radius: 12px; margin-bottom: 12px; border-left: 4px solid #e94560; }
+        .news-item h3 { color: #1a1a2e; margin-bottom: 6px; font-size: 1.05rem; }
+        .news-item p { color: #666; line-height: 1.5; font-size: 0.9rem; }
+        .news-item .link, .trending-item .link { margin-top: 8px; font-size: 0.85rem; }
+        .news-item .link a, .trending-item .link a { color: #7c3aed; text-decoration: none; }
+        .english { color: #666; font-style: italic; margin-top: 8px; padding-top: 8px; border-top: 1px dashed #ddd; font-size: 0.9rem; }
+        .trending-item { display: flex; align-items: flex-start; gap: 12px; padding: 14px; background: linear-gradient(135deg,#fff5f5,#fed7d7); border-radius: 12px; margin-bottom: 12px; border-left: 4px solid #f59e0b; }
+        .trending-item .rank { width: 32px; height: 32px; background: #f59e0b; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.9rem; }
+        .trending-item .content h3 { color: #1a1a2e; margin-bottom: 5px; font-size: 1rem; }
+        .trending-item .content p { color: #666; line-height: 1.5; font-size: 0.9rem; }
+        table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.9rem; }
+        th,td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background: #f8f9fa; color: #555; font-weight: 600; font-size: 0.85rem; }
+        tr:hover { background: #f8f9fa; }
+        .status-done { color: #10b981; font-weight: 600; }
+        .status-progress { color: #f59e0b; font-weight: 600; }
+        .status-pending { color: #6b7280; }
+        .footer { text-align: center; color: white; margin-top: 30px; opacity: 0.8; font-size: 0.9rem; }
+        @media(max-width:1200px){ .main-content{grid-template-columns:1fr} .weather-bar{flex-direction:column;gap:10px;text-align:center} }
+    </style>
 </head>
 <body>
-<div class="container>
+<div class="container">
 <div class="weather-bar">
 <h2>📍 武汉</h2>
-<div class="info"><span>☀️晴</span><span style="margin:0 15px;">+17°C</span><span>💧 湿度 42%</span></div>
-<div class="update">更新于 2026-03-13</div>
+<div class="info"><span>☀️晴</span><span style="margin:0 15px;">17°C</span><span>💧 湿度 42%</span></div>
+<div class="update">更新于 2026-03-13 20:00</div>
 </div>
-<div class="main-content>
-<div class="left-column>
+<div class="main-content">
+<div class="left-column">
+
+<!-- 行业动态：来自飞书行业报告 -->
 <div class="card">
 <h2 class="card-title"><span class="icon">📈</span> 行业动态 - 飞书行业报告</h2>
+
 <div class="news-item">
-        <h3>请在飞书行业报告文件夹查看最新报告</h3>
-        <p>行业报告文件夹: <a href="https://qig7up6duh.feishu.cn/drive/folder/UlnOfQaxslwjJVdKzBXc22DrnDc" target="_blank">打开文件夹</a></p>
-      </div>
+<h3>1. Crusoe宣布新建模块化AI工厂</h3>
+<p>Crusoe在科罗拉多州布鲁姆菲尔德建立"Spark Factory"，投资超2亿美元，生产模块化AI工厂Crusoe Spark™，可3个月交付。</p>
+<div class="link">🔗 <a href="https://www.manilatimes.net/2026/03/12/tmt-newswire/globenewswire/crusoe-announces-new-manufacturing-facility-to-produce-modular-ai-factories/2299056" target="_blank">The Manila Times</a></div>
+<p class="english">Crusoe announced a new specialized manufacturing facility in Brighton, Colorado. The $200+ million investment will create over 200 local jobs.</p>
 </div>
+
+<div class="news-item">
+<h3>2. AI赋能生物制药客户参与</h3>
+<p>60%制药领导报告AI项目1年内2倍ROI。Optichannel营销可实现3倍处方量提升，将商业规划时间从18个月缩短到6个月。</p>
+<div class="link">🔗 <a href="https://pharmaphorum.com/sales-marketing/harnessing-ai-transform-end-end-customer-engagement-pharma-and-biotech" target="_blank">Pharmaphorum</a></div>
+<p class="english">Nearly six in 10 pharma leaders report seeing 2x ROI from AI initiatives within a year. Optichannel delivers 3x average script lift.</p>
+</div>
+
+<div class="news-item">
+<h3>3. 细胞治疗周报-APAC开发</h3>
+<p>BioCurie获ARPA-H 930万美元资助开发AI基因疗法平台。Lonza和Genetix扩大ZYNTEGLO™合作。Terumo BCT启动APAC生态系统蓝图。</p>
+<div class="link">🔗 <a href="https://www.regmednet.com/cell-therapy-weekly-initiative-to-expand-apac-cell-and-gene-therapy-development/" target="_blank">RegMedNet</a></div>
+<p class="english">BioCurie announced ARPA-H awarded up to US$9.3 million for AI-driven gene therapy platform development.</p>
+</div>
+
+<div class="news-item">
+<h3>4. JVCKENWOOD选择IFS Cloud</h3>
+<p>JVCKENWOOD选择IFS Cloud作为下一代ERP和MES平台，计划2027年4月试点，实现工业AI实时数据驱动决策。</p>
+<div class="link">🔗 <a href="https://www.manilatimes.net/2026/03/12/tmt-newswire/pr-newswire/jvckenwood-corporation-selects-ifs-cloud-to-modernize-global-manufacturing-operations/2298854" target="_blank">The Manila Times</a></div>
+<p class="english">JVCKENWOOD selected IFS Cloud as next-generation ERP and MES platform to enable Industrial AI for real-time decisions.</p>
+</div>
+
+<p style="margin-top:15px;font-size:0.85rem;color:#666;">
+📄 <a href="https://qig7up6duh.feishu.cn/docx/FKe8diWR2oLzByxWeeTcYsVqnTd" target="_blank" style="color:#7c3aed;">查看飞书行业报告完整版</a>
+</p>
+</div>
+
+<!-- 国内热门话题 -->
 <div class="card">
 <h2 class="card-title"><span class="icon">🇨🇳</span> 国内热门话题</h2>
 
-    <div class="trending-item">
-      <div class="rank">1</div>
-      <div class="content">
-        <h3>Chinese banks boost loans to tech sector</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://www.reuters.com/business/finance/chinese-banks-boost-loans-tech-sector-beijing-ramps-up-ai-push-2026-03-12/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
-      </div>
-    </div>
-  
-    <div class="trending-item">
-      <div class="rank">2</div>
-      <div class="content">
-        <h3>Introducing AutoNews Answers — an AI res</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://www.autonews.com/technology/an-autonews-answers-ai-research-tool-312/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
-      </div>
-    </div>
-  
-    <div class="trending-item">
-      <div class="rank">3</div>
-      <div class="content">
-        <h3>Why Cars Cost So Much More—And What’s Be</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://www.forbes.com/sites/michaelharley/2026/03/12/why-cars-cost-so-much-more-and-whats-behind-the-price-surge/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
-      </div>
-    </div>
-  
-    <div class="trending-item">
-      <div class="rank">4</div>
-      <div class="content">
-        <h3>Sales automation startup Rox AI hits $1.</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://techcrunch.com/2026/03/12/sales-automation-startup-rox-ai-hits-1-2b-valuation-sources-say/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
-      </div>
-    </div>
-  
-    <div class="trending-item">
-      <div class="rank">5</div>
-      <div class="content">
-        <h3>Tesla's China sales climb in the first t</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://www.cnbc.com/2026/03/13/teslas-china-sales-climb-in-the-first-two-months-of-2026-while-byd-numbers-drop.html" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
-      </div>
-    </div>
-  
+<div class="trending-item">
+<div class="rank">1</div>
+<div class="content">
+<h3>中国银行加大科技贷款</h3>
+<p>中国银行优先向先进制造业、AI和生物技术领域提供贷款，北京加大AI推进力度。</p>
+<div class="link">🔗 <a href="https://www.reuters.com/business/finance/chinese-banks-boost-loans-tech-sector-beijing-ramps-up-ai-push-2026-03-12/" target="_blank">Reuters</a></div>
+<p class="english">Chinese banks prioritize tech sector loans in advanced manufacturing, AI, and biotechnology.</p>
 </div>
+</div>
+
+<div class="trending-item">
+<div class="rank">2</div>
+<div class="content">
+<h3>特斯拉中国销量增长35%</h3>
+<p>2026年前两个月，特斯拉中国产电动车销量同比增长超35%，而比亚迪销量下降36%。</p>
+<div class="link">🔗 <a href="https://www.cnbc.com/2026/03/13/teslas-china-sales-climb-in-the-first-two-months-of-2026-while-byd-numbers-drop.html" target="_blank">CNBC</a></div>
+<p class="english">Tesla's China-made EVs rose by 35% YoY, while BYD dropped 36% in the same period.</p>
+</div>
+</div>
+
+<div class="trending-item">
+<div class="rank">3</div>
+<div class="content">
+<h3>汽车价格上涨原因</h3>
+<p>Forbes报道：新车价格上涨原因包括高端车型优先级、新安全功能、贸易关税等因素。</p>
+<div class="link">🔗 <a href="https://www.forbes.com/sites/michaelharley/2026/03/12/why-cars-cost-so-much-more-and-whats-behind-the-price-surge/" target="_blank">Forbes</a></div>
+<p class="english">Cars cost more due to higher-end vehicle prioritization, new safety features, and trade tariffs.</p>
+</div>
+</div>
+
+<div class="trending-item">
+<div class="rank">4</div>
+<div class="content">
+<h3>AutoNews AI研究助手</h3>
+<p>Automotive News推出AI研究助手，为订阅者提供快速准确的行业答案。</p>
+<div class="link">🔗 <a href="https://www.autonews.com/technology/an-autonews-answers-ai-research-tool-312/" target="_blank">Automotive News</a></div>
+<p class="english">Automotive News introduced an AI research assistant for subscribers.</p>
+</div>
+</div>
+
+<div class="trending-item">
+<div class="rank">5</div>
+<div class="content">
+<h3>Rox AI估值12亿美元</h3>
+<p>销售自动化初创公司Rox AI完成融资，估值达12亿美元。</p>
+<div class="link">🔗 <a href="https://techcrunch.com/2026/03/12/sales-automation-startup-rox-ai-hits-1-2b-valuation-sources-say/" target="_blank">TechCrunch</a></div>
+<p class="english">Sales automation startup Rox AI hits $1.2B valuation.</p>
+</div>
+</div>
+</div>
+
+<!-- 国际热门话题 -->
 <div class="card">
 <h2 class="card-title"><span class="icon">🌍</span> 国际热门话题</h2>
 
-    <div class="trending-item">
-      <div class="rank">1</div>
-      <div class="content">
-        <h3>Introducing AutoNews Answers — an AI res</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://www.autonews.com/technology/an-autonews-answers-ai-research-tool-312/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
-      </div>
-    </div>
-  
-    <div class="trending-item">
-      <div class="rank">2</div>
-      <div class="content">
-        <h3>ANC Podcast: March 13, 2026 | The week’s</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://canada.autonews.com/podcasts/canada-conversations/anc-auto-news-canada-podcast-lana-payne-0313/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
-      </div>
-    </div>
-  
-    <div class="trending-item">
-      <div class="rank">3</div>
-      <div class="content">
-        <h3>What's next for the Genesis Mission - Ax</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://www.axios.com/2026/03/13/doe-dell-genesis-mission" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
-      </div>
-    </div>
-  
-    <div class="trending-item">
-      <div class="rank">4</div>
-      <div class="content">
-        <h3>Netflix confirms KPop Demon Hunters 2 br</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://community.designtaxi.com/topic/24951-netflix-confirms-kpop-demon-hunters-2-bringing-the-demon-hunting-idols-back/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
-      </div>
-    </div>
-  
-    <div class="trending-item">
-      <div class="rank">5</div>
-      <div class="content">
-        <h3>AI Seeking Out Crypto Illustrates A Comi</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://www.forbes.com/sites/digital-assets/2026/03/12/ai-seeking-out-crypto-illustrates-a-coming-convergence/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
-      </div>
-    </div>
-  
+<div class="trending-item">
+<div class="rank">1</div>
+<div class="content">
+<h3>美国AI任务计划Genesis Mission</h3>
+<p>Trump政府推动通过AI加速科学发现的Genesis Mission，计划培训10万科学家和工程师。</p>
+<div class="link">🔗 <a href="https://www.axios.com/2026/03/13/doe-dell-genesis-mission" target="_blank">Axios</a></div>
+<p class="english">Trump administration pushes Genesis Mission to use AI for quantum computing and fusion power.</p>
 </div>
 </div>
+
+<div class="trending-item">
+<div class="rank">2</div>
+<div class="content">
+<h3>AI代理挑战北京数据政策</h3>
+<p>AI代理的崛起威胁中国在个人数据保护方面的平衡。</p>
+<div class="link">🔗 <a href="https://www.politico.com/newsletters/digital-future-daily/2026/03/12/the-rise-of-ai-agents-tests-beijings-playbook-00826002" target="_blank">Politico</a></div>
+<p class="english">The rise of AI agents tests Beijing's playbook on data privacy protection in China.</p>
+</div>
+</div>
+
+<div class="trending-item">
+<div class="rank">3</div>
+<div class="content">
+<h3>Netflix确认KPop Demon Hunters 2</h3>
+<p>Netflix确认热门动画《KPop Demon Hunters》第二季即将回归。</p>
+<div class="link">🔗 <a href="https://community.designtaxi.com/topic/24951-netflix-confirms-kpop-demon-hunters-2-bringing-the-demon-hunting-idols-back/" target="_blank">DesignTAXI</a></div>
+<p class="english">Netflix confirms KPop Demon Hunters 2 bringing the demon-hunting idols back.</p>
+</div>
+</div>
+
+<div class="trending-item">
+<div class="rank">4</div>
+<div class="content">
+<h3>加拿大汽车投资讨论</h3>
+<p>Unifor总统讨论加拿大汽车投资，政府将新工厂与120亿美元潜艇交易挂钩。</p>
+<div class="link">🔗 <a href="https://canada.autonews.com/podcasts/canada-conversations/anc-auto-news-canada-podcast-lana-payne-0313/" target="_blank">Automotive News</a></div>
+<p class="english">Unifor President discusses Canadian auto investment and government approach to new factories.</p>
+</div>
+</div>
+
+<div class="trending-item">
+<div class="rank">5</div>
+<div class="content">
+<h3>Honda取消3款电动车</h3>
+<p>Honda取消美国3款电动车车型，警告EV部门将出现重大亏损。</p>
+<div class="link">🔗 <a href="https://www.autonews.com/technology/an-autonews-answers-ai-research-tool-312/" target="_blank">Automotive News</a></div>
+<p class="english">Honda cancels 3 EV models in the U.S. and warns of significant losses in its EV division.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- 右边：工作汇总 -->
 <div class="card">
 <h2 class="card-title"><span class="icon">💼</span> 工作汇总</h2>
-<table><tr><th>日期</th><th>工作</th><th>状态</th></tr>
-<tr><td>周一</td><td>复产前检查、赋码维修</td><td class="status-progress">进行中</td></tr>
-<tr><td>周二</td><td>CAPA签批、层析校准完成</td><td class="status-done">✓</td></tr>
-<tr><td>周三</td><td>灭菌柜培训准备</td><td class="status-done">✓</td></tr>
-<tr><td>周四</td><td>灭菌柜现场培训</td><td class="status-done">✓</td></tr>
-<tr><td>周五</td><td>质量目标签订</td><td class="status-progress">进行中</td></tr>
+<p style="color:#666;margin-bottom:15px;">2026年3月9日-13日</p>
+
+<table>
+<tr><th>日期</th><th>工作内容</th><th>状态</th></tr>
+<tr><td>周一 3/9</td><td>复产前检查、赋码系统维修、层析电导校准</td><td class="status-progress">进行中</td></tr>
+<tr><td>周二 3/10</td><td>复产前整改完成、CAPA签批、层析校准完成</td><td class="status-done">✓</td></tr>
+<tr><td>周三 3/11</td><td>赋码跟踪、灭菌柜培训准备、工会代表大会</td><td class="status-done">✓</td></tr>
+<tr><td>周四 3/12</td><td>灭菌柜现场培训、传递窗维修、温度探头检查</td><td class="status-done">✓</td></tr>
+<tr><td>周五 3/13</td><td>质量目标签订、分离信号干扰检查</td><td class="status-progress">进行中</td></tr>
 </table>
-<h3 style="margin-top:20px;color:#1a1a2e;">📋 待处理任务</h3>
-<table><tr><td>CR-00381/EC 隔膜阀膜片</td><td class="status-progress">月底关闭</td></tr>
-<tr><td>CAPA-02524 地漏维修</td><td class="status-pending">待验收</td></tr>
+
+<h3 style="margin-top:25px;color:#1a1a2e;">📋 待处理任务</h3>
+<table>
+<tr><td>CR-00381/EC 隔膜阀膜片更换</td><td class="status-progress">月底关闭</td></tr>
+<tr><td>CAPA-02524 分装地漏维修</td><td class="status-pending">待验收</td></tr>
 <tr><td>层流报告修订</td><td class="status-pending">待签字</td></tr>
-<tr><td>配液温度探头</td><td class="status-pending">待更换</td></tr>
+<tr><td>配液304-4温度探头更换</td><td class="status-pending">待更换</td></tr>
+<tr><td>分离罐称重信号检查</td><td class="status-progress">周六测试</td></tr>
 </table>
+
+<h3 style="margin-top:25px;color:#1a1a2e;">👥 今日人员安排</h3>
+<table>
+<tr><td>李迪迪</td><td>委外流程</td></tr>
+<tr><td>薛战魁</td><td>分装陪产</td></tr>
+<tr><td>饶苇浩</td><td>配液探头</td></tr>
+<tr><td>刘建明</td><td>现场巡检</td></tr>
+<tr><td>皮富明</td><td>中班、层析校准</td></tr>
+<tr><td>吴积辉</td><td>包装陪产</td></tr>
+</table>
+
+<h3 style="margin-top:25px;color:#1a1a2e;">📅 会议安排</h3>
+<p style="padding:12px;background:#f8f9fa;border-radius:8px;">
+<strong>3月16日 9:00</strong><br>
+党风廉政建设和反腐败工作会议
+</p>
 </div>
 </div>
+
 <div class="footer">
-<p>📅 汇总日期：2026-03-13 | 工程部 · 持续关注行业动态</p>
+<p>📅 汇总日期：2026年3月13日 | 工程部 · 持续关注行业动态</p>
 </div>
 </div>
 </body>
