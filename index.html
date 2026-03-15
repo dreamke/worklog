@@ -12,22 +12,17 @@ body { font-family: 'Segoe UI','Microsoft YaHei',sans-serif; background: linear-
 .weather-bar h2 { font-size: 1.8rem; }
 .weather-bar .info { font-size: 1.3rem; }
 .weather-bar .update { opacity: 0.9; font-size: 0.9rem; }
-.main-content { display: grid; grid-template-columns: 1fr 400px; gap: 25px; }
+.main-content { display: grid; grid-template-columns: 1fr 450px; gap: 25px; }
 .left-column { display: flex; flex-direction: column; gap: 25px; }
 .card { background: white; border-radius: 20px; padding: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); animation: fadeInUp 0.6s ease-out; }
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .card-title { font-size: 1.4rem; color: #1a1a2e; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 3px solid #e94560; display: flex; align-items: center; gap: 10px; }
 .card-title .icon { font-size: 1.6rem; }
-.news-item { padding: 15px; background: linear-gradient(135deg,#f8f9fa,#e9ecef); border-radius: 12px; margin-bottom: 12px; border-left: 4px solid #e94560; }
-.news-item h3 { color: #1a1a2e; margin-bottom: 6px; font-size: 1.05rem; }
+.industry-report { padding: 15px; background: linear-gradient(135deg,#f8f9fa,#e9ecef); border-radius: 12px; border-left: 4px solid #e94560; }
+.news-item { padding: 15px; border-radius: 12px; margin-bottom: 12px; }
+.news-item h4 { margin-bottom: 5px; }
 .news-item p { color: #666; line-height: 1.5; font-size: 0.9rem; }
-.news-item .link, .trending-item .link { margin-top: 8px; font-size: 0.85rem; }
-.news-item .link a, .trending-item .link a { color: #7c3aed; text-decoration: none; }
-.english { color: #666; font-style: italic; margin-top: 8px; padding-top: 8px; border-top: 1px dashed #ddd; font-size: 0.9rem; }
-.trending-item { display: flex; align-items: flex-start; gap: 12px; padding: 14px; background: linear-gradient(135deg,#fff5f5,#fed7d7); border-radius: 12px; margin-bottom: 12px; border-left: 4px solid #f59e0b; }
-.trending-item .rank { width: 32px; height: 32px; background: #f59e0b; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; font-size: 0.9rem; }
-.trending-item .content h3 { color: #1a1a2e; margin-bottom: 5px; font-size: 1rem; }
-.trending-item .content p { color: #666; line-height: 1.5; font-size: 0.9rem; }
+.news-item .link a { color: #7c3aed; text-decoration: none; font-weight: 600; }
 table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.9rem; }
 th,td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
 th { background: #f8f9fa; color: #555; font-weight: 600; font-size: 0.85rem; }
@@ -40,71 +35,105 @@ tr:hover { background: #f8f9fa; }
 </style>
 </head>
 <body>
-<div class="container>
+<div class="container">
 <div class="weather-bar">
 <h2>📍 武汉</h2>
 <div class="info"><span>mist</span><span style="margin:0 15px;">+9°C</span><span>💧 湿度 100%</span></div>
 <div class="update">更新于 2026-03-15</div>
 </div>
-<div class="main-content>
-<div class="left-column>
+<div class="main-content">
+<div class="left-column">
 <div class="card">
 <h2 class="card-title"><span class="icon">📈</span> 行业动态 - 飞书行业报告</h2>
-<div class="news-item">
-        <h3>请在飞书行业报告文件夹查看最新报告</h3>
-        <p>行业报告文件夹: <a href="https://qig7up6duh.feishu.cn/drive/folder/UlnOfQaxslwjJVdKzBXc22DrnDc" target="_blank">打开文件夹</a></p>
-      </div>
+
+        <div class="industry-report">
+          <p style="color:#666;">暂无行业报告</p>
+          <div class="link" style="margin-top:12px;">
+            🔗 <a href="https://qig7up6duh.feishu.cn/drive/folder/UlnOfQaxslwjJVdKzBXc22DrnDc" target="_blank" style="color:#7c3aed;text-decoration:none;">打开行业报告文件夹</a>
+          </div>
+        </div>
+      
 </div>
 <div class="card">
 <h2 class="card-title"><span class="icon">🇨🇳</span> 国内热门话题</h2>
 
-    <div class="trending-item">
-      <div class="rank">1</div>
-      <div class="content">
-        <h3>‘Raise a lobster’: How OpenClaw is the l</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://fortune.com/2026/03/14/openclaw-china-ai-agent-boom-open-source-lobster-craze-minimax-qwen/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
+    <div class="news-item" style="background:linear-gradient(135deg,#fff5f5,#fed7d7);border-left:4px solid #f59e0b;">
+      <div style="display:flex;align-items:center;margin-bottom:8px;">
+        <span style="width:28px;height:28px;background:#f59e0b;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.85rem;margin-right:10px;">1</span>
+        <h4 style="color:#1a1a2e;font-size:1rem;">‘Raise a lobster’: How OpenClaw is the latest craz</h4>
+      </div>
+      <div style="margin:10px 0;">
+        <div style="font-size:0.85rem;color:#666;line-height:1.6;margin-bottom:10px;">
+          暂无内容
+        </div>
+        
+      </div>
+      <div class="link" style="font-size:0.85rem;margin-top:8px;">
+        🔗 <a href="https://fortune.com/2026/03/14/openclaw-china-ai-agent-boom-open-source-lobster-craze-minimax-qwen/" target="_blank" style="color:#7c3aed;text-decoration:none;">原文链接</a>
       </div>
     </div>
   
-    <div class="trending-item">
-      <div class="rank">2</div>
-      <div class="content">
-        <h3>5 Highlights To Watch At Nvidia GTC 2026</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://www.forbes.com/sites/timkeary/2026/03/14/5-highlights-to-watch-at-nvidia-gtc-2026/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
+    <div class="news-item" style="background:linear-gradient(135deg,#fff5f5,#fed7d7);border-left:4px solid #f59e0b;">
+      <div style="display:flex;align-items:center;margin-bottom:8px;">
+        <span style="width:28px;height:28px;background:#f59e0b;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.85rem;margin-right:10px;">2</span>
+        <h4 style="color:#1a1a2e;font-size:1rem;">5 Highlights To Watch At Nvidia GTC 2026 - Forbes</h4>
+      </div>
+      <div style="margin:10px 0;">
+        <div style="font-size:0.85rem;color:#666;line-height:1.6;margin-bottom:10px;">
+          暂无内容
+        </div>
+        
+      </div>
+      <div class="link" style="font-size:0.85rem;margin-top:8px;">
+        🔗 <a href="https://www.forbes.com/sites/timkeary/2026/03/14/5-highlights-to-watch-at-nvidia-gtc-2026/" target="_blank" style="color:#7c3aed;text-decoration:none;">原文链接</a>
       </div>
     </div>
   
-    <div class="trending-item">
-      <div class="rank">3</div>
-      <div class="content">
-        <h3>China’s safety crackdown on EV tech posi</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://www.autonews.com/manufacturing/an-china-new-global-safety-regulator-ev-handles-screens-steering-0315/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
+    <div class="news-item" style="background:linear-gradient(135deg,#fff5f5,#fed7d7);border-left:4px solid #f59e0b;">
+      <div style="display:flex;align-items:center;margin-bottom:8px;">
+        <span style="width:28px;height:28px;background:#f59e0b;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.85rem;margin-right:10px;">3</span>
+        <h4 style="color:#1a1a2e;font-size:1rem;">China’s safety crackdown on EV tech positions Beij</h4>
+      </div>
+      <div style="margin:10px 0;">
+        <div style="font-size:0.85rem;color:#666;line-height:1.6;margin-bottom:10px;">
+          暂无内容
+        </div>
+        
+      </div>
+      <div class="link" style="font-size:0.85rem;margin-top:8px;">
+        🔗 <a href="https://www.autonews.com/manufacturing/an-china-new-global-safety-regulator-ev-handles-screens-steering-0315/" target="_blank" style="color:#7c3aed;text-decoration:none;">原文链接</a>
       </div>
     </div>
   
-    <div class="trending-item">
-      <div class="rank">4</div>
-      <div class="content">
-        <h3>Chinese remedy for Europe’s auto overcap</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://canada.autonews.com/europe/ane-europe-overcapacity-0314/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
+    <div class="news-item" style="background:linear-gradient(135deg,#fff5f5,#fed7d7);border-left:4px solid #f59e0b;">
+      <div style="display:flex;align-items:center;margin-bottom:8px;">
+        <span style="width:28px;height:28px;background:#f59e0b;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.85rem;margin-right:10px;">4</span>
+        <h4 style="color:#1a1a2e;font-size:1rem;">Chinese remedy for Europe’s auto overcapacity face</h4>
+      </div>
+      <div style="margin:10px 0;">
+        <div style="font-size:0.85rem;color:#666;line-height:1.6;margin-bottom:10px;">
+          暂无内容
+        </div>
+        
+      </div>
+      <div class="link" style="font-size:0.85rem;margin-top:8px;">
+        🔗 <a href="https://canada.autonews.com/europe/ane-europe-overcapacity-0314/" target="_blank" style="color:#7c3aed;text-decoration:none;">原文链接</a>
       </div>
     </div>
   
-    <div class="trending-item">
-      <div class="rank">5</div>
-      <div class="content">
-        <h3>The Rapid Trajectory Of Artificial Intel</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://www.forbes.com/sites/chuckbrooks/2026/03/14/the-rapid-trajectory-of-artificial-intelligence/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
+    <div class="news-item" style="background:linear-gradient(135deg,#fff5f5,#fed7d7);border-left:4px solid #f59e0b;">
+      <div style="display:flex;align-items:center;margin-bottom:8px;">
+        <span style="width:28px;height:28px;background:#f59e0b;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.85rem;margin-right:10px;">5</span>
+        <h4 style="color:#1a1a2e;font-size:1rem;">The Rapid Trajectory Of Artificial Intelligence - </h4>
+      </div>
+      <div style="margin:10px 0;">
+        <div style="font-size:0.85rem;color:#666;line-height:1.6;margin-bottom:10px;">
+          暂无内容
+        </div>
+        
+      </div>
+      <div class="link" style="font-size:0.85rem;margin-top:8px;">
+        🔗 <a href="https://www.forbes.com/sites/chuckbrooks/2026/03/14/the-rapid-trajectory-of-artificial-intelligence/" target="_blank" style="color:#7c3aed;text-decoration:none;">原文链接</a>
       </div>
     </div>
   
@@ -112,73 +141,117 @@ tr:hover { background: #f8f9fa; }
 <div class="card">
 <h2 class="card-title"><span class="icon">🌍</span> 国际热门话题</h2>
 
-    <div class="trending-item">
-      <div class="rank">1</div>
-      <div class="content">
-        <h3>The Rapid Trajectory Of Artificial Intel</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://www.forbes.com/sites/chuckbrooks/2026/03/14/the-rapid-trajectory-of-artificial-intelligence/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
+    <div class="news-item" style="background:linear-gradient(135deg,#f0f4ff,#dbeafe);border-left:4px solid #3b82f6;">
+      <div style="display:flex;align-items:center;margin-bottom:8px;">
+        <span style="width:28px;height:28px;background:#3b82f6;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.85rem;margin-right:10px;">1</span>
+        <h4 style="color:#1a1a2e;font-size:1rem;">The Rapid Trajectory Of Artificial Intelligence - </h4>
+      </div>
+      <div style="margin:10px 0;">
+        <div style="font-size:0.85rem;color:#666;line-height:1.6;margin-bottom:10px;">
+          No content available
+        </div>
+        
+      </div>
+      <div class="link" style="font-size:0.85rem;margin-top:8px;">
+        🔗 <a href="https://www.forbes.com/sites/chuckbrooks/2026/03/14/the-rapid-trajectory-of-artificial-intelligence/" target="_blank" style="color:#3b82f6;text-decoration:none;">Original Link</a>
       </div>
     </div>
   
-    <div class="trending-item">
-      <div class="rank">2</div>
-      <div class="content">
-        <h3>“This Wasn’t An Easy Call” Sparks OpenAI</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://glassalmanac.com/this-wasnt-an-easy-call-sparks-openai-backlash-in-march-2026-heres-why/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
+    <div class="news-item" style="background:linear-gradient(135deg,#f0f4ff,#dbeafe);border-left:4px solid #3b82f6;">
+      <div style="display:flex;align-items:center;margin-bottom:8px;">
+        <span style="width:28px;height:28px;background:#3b82f6;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.85rem;margin-right:10px;">2</span>
+        <h4 style="color:#1a1a2e;font-size:1rem;">“This Wasn’t An Easy Call” Sparks OpenAI Backlash </h4>
+      </div>
+      <div style="margin:10px 0;">
+        <div style="font-size:0.85rem;color:#666;line-height:1.6;margin-bottom:10px;">
+          No content available
+        </div>
+        
+      </div>
+      <div class="link" style="font-size:0.85rem;margin-top:8px;">
+        🔗 <a href="https://glassalmanac.com/this-wasnt-an-easy-call-sparks-openai-backlash-in-march-2026-heres-why/" target="_blank" style="color:#3b82f6;text-decoration:none;">Original Link</a>
       </div>
     </div>
   
-    <div class="trending-item">
-      <div class="rank">3</div>
-      <div class="content">
-        <h3>6 Augmented Reality Hardware And Policy </h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://glassalmanac.com/6-augmented-reality-hardware-and-policy-shifts-in-2026-that-will-surprise-buyers/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
+    <div class="news-item" style="background:linear-gradient(135deg,#f0f4ff,#dbeafe);border-left:4px solid #3b82f6;">
+      <div style="display:flex;align-items:center;margin-bottom:8px;">
+        <span style="width:28px;height:28px;background:#3b82f6;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.85rem;margin-right:10px;">3</span>
+        <h4 style="color:#1a1a2e;font-size:1rem;">6 Augmented Reality Hardware And Policy Shifts In </h4>
+      </div>
+      <div style="margin:10px 0;">
+        <div style="font-size:0.85rem;color:#666;line-height:1.6;margin-bottom:10px;">
+          No content available
+        </div>
+        
+      </div>
+      <div class="link" style="font-size:0.85rem;margin-top:8px;">
+        🔗 <a href="https://glassalmanac.com/6-augmented-reality-hardware-and-policy-shifts-in-2026-that-will-surprise-buyers/" target="_blank" style="color:#3b82f6;text-decoration:none;">Original Link</a>
       </div>
     </div>
   
-    <div class="trending-item">
-      <div class="rank">4</div>
-      <div class="content">
-        <h3>SUPPLYCO AI Launches First AI Sales Inte</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://www.usatoday.com/press-release/story/26479/supplyco-ai-launches-first-ai-sales-intelligence-platform-built-for-industrial-manufacturing/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
+    <div class="news-item" style="background:linear-gradient(135deg,#f0f4ff,#dbeafe);border-left:4px solid #3b82f6;">
+      <div style="display:flex;align-items:center;margin-bottom:8px;">
+        <span style="width:28px;height:28px;background:#3b82f6;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.85rem;margin-right:10px;">4</span>
+        <h4 style="color:#1a1a2e;font-size:1rem;">SUPPLYCO AI Launches First AI Sales Intelligence P</h4>
+      </div>
+      <div style="margin:10px 0;">
+        <div style="font-size:0.85rem;color:#666;line-height:1.6;margin-bottom:10px;">
+          No content available
+        </div>
+        
+      </div>
+      <div class="link" style="font-size:0.85rem;margin-top:8px;">
+        🔗 <a href="https://www.usatoday.com/press-release/story/26479/supplyco-ai-launches-first-ai-sales-intelligence-platform-built-for-industrial-manufacturing/" target="_blank" style="color:#3b82f6;text-decoration:none;">Original Link</a>
       </div>
     </div>
   
-    <div class="trending-item">
-      <div class="rank">5</div>
-      <div class="content">
-        <h3>China’s safety crackdown on EV tech posi</h3>
-        <p>暂无摘要</p>
-        <div class="link">🔗 <a href="https://www.autonews.com/manufacturing/an-china-new-global-safety-regulator-ev-handles-screens-steering-0315/" target="_blank">原文链接</a></div>
-        <p class="english">No content</p>
+    <div class="news-item" style="background:linear-gradient(135deg,#f0f4ff,#dbeafe);border-left:4px solid #3b82f6;">
+      <div style="display:flex;align-items:center;margin-bottom:8px;">
+        <span style="width:28px;height:28px;background:#3b82f6;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:0.85rem;margin-right:10px;">5</span>
+        <h4 style="color:#1a1a2e;font-size:1rem;">China’s safety crackdown on EV tech positions Beij</h4>
+      </div>
+      <div style="margin:10px 0;">
+        <div style="font-size:0.85rem;color:#666;line-height:1.6;margin-bottom:10px;">
+          No content available
+        </div>
+        
+      </div>
+      <div class="link" style="font-size:0.85rem;margin-top:8px;">
+        🔗 <a href="https://www.autonews.com/manufacturing/an-china-new-global-safety-regulator-ev-handles-screens-steering-0315/" target="_blank" style="color:#3b82f6;text-decoration:none;">Original Link</a>
       </div>
     </div>
   
 </div>
 </div>
+<div class="right-column">
 <div class="card">
 <h2 class="card-title"><span class="icon">💼</span> 工作汇总</h2>
-<table><tr><th>日期</th><th>工作</th><th>状态</th></tr>
-<tr><td>周一</td><td>复产前检查、赋码维修</td><td class="status-progress">进行中</td></tr>
-<tr><td>周二</td><td>CAPA签批、层析校准完成</td><td class="status-done">✓</td></tr>
-<tr><td>周三</td><td>灭菌柜培训准备</td><td class="status-done">✓</td></tr>
-<tr><td>周四</td><td>灭菌柜现场培训</td><td class="status-done">✓</td></tr>
-<tr><td>周五</td><td>质量目标签订</td><td class="status-progress">进行中</td></tr>
+
+<table>
+<tr><th>日期</th><th>工作内容</th><th>状态</th></tr>
+<tr><td>周一</td><td>复产前检查、赋码维修</td><td class="status-progress">🔄 进行中</td></tr>
+<tr><td>周二</td><td>CAPA 签批、层析校准完成</td><td class="status-done">✅ 完成</td></tr>
+<tr><td>周三</td><td>灭菌柜培训准备</td><td class="status-done">✅ 完成</td></tr>
+<tr><td>周四</td><td>灭菌柜现场培训</td><td class="status-done">✅ 完成</td></tr>
+<tr><td>周五</td><td>质量目标签订</td><td class="status-progress">🔄 进行中</td></tr>
 </table>
-<h3 style="margin-top:20px;color:#1a1a2e;">📋 待处理任务</h3>
-<table><tr><td>CR-00381/EC 隔膜阀膜片</td><td class="status-progress">月底关闭</td></tr>
-<tr><td>CAPA-02524 地漏维修</td><td class="status-pending">待验收</td></tr>
-<tr><td>层流报告修订</td><td class="status-pending">待签字</td></tr>
-<tr><td>配液温度探头</td><td class="status-pending">待更换</td></tr>
+
+<h3 style="margin-top:20px;color:#1a1a2e;font-size:1.1rem;">📋 待处理任务</h3>
+<table>
+<tr><td>CR-00381/EC 隔膜阀膜片</td><td class="status-progress">📅 月底关闭</td></tr>
+<tr><td>CAPA-02524 地漏维修</td><td class="status-pending">⏳ 待验收</td></tr>
+<tr><td>层流报告修订</td><td class="status-pending">⏳ 待签字</td></tr>
+<tr><td>配液温度探头</td><td class="status-pending">⏳ 待更换</td></tr>
 </table>
+
+<h3 style="margin-top:20px;color:#1a1a2e;font-size:1.1rem;">👥 人员安排</h3>
+<table>
+<tr><td>张三</td><td>A 班 - 设备维护</td></tr>
+<tr><td>李四</td><td>B 班 - 质量控制</td></tr>
+<tr><td>王五</td><td>C 班 - 生产操作</td></tr>
+</table>
+
+</div>
 </div>
 </div>
 <div class="footer">
