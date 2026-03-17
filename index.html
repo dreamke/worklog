@@ -18,20 +18,11 @@ body { font-family: 'Segoe UI','Microsoft YaHei',sans-serif; background: linear-
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .card-title { font-size: 1.4rem; color: #1a1a2e; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 3px solid #e94560; display: flex; align-items: center; gap: 10px; }
 .card-title .icon { font-size: 1.6rem; }
-.industry-report { padding: 15px; background: linear-gradient(135deg,#f8f9fa,#e9ecef); border-radius: 12px; border-left: 4px solid #e94560; }
-.news-item { padding: 15px; border-radius: 12px; margin-bottom: 12px; }
-.news-item h4 { margin-bottom: 5px; }
-.news-item p { color: #666; line-height: 1.5; font-size: 0.9rem; }
-.news-item .link a { color: #7c3aed; text-decoration: none; font-weight: 600; }
-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.9rem; }
-th,td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
-th { background: #f8f9fa; color: #555; font-weight: 600; font-size: 0.85rem; }
-tr:hover { background: #f8f9fa; }
-.status-done { color: #10b981; font-weight: 600; }
-.status-progress { color: #f59e0b; font-weight: 600; }
-.status-pending { color: #6b7280; }
-.footer { text-align: center; color: white; margin-top: 30px; opacity: 0.8; font-size: 0.9rem; }
-@media(max-width:1200px){ .main-content{grid-template-columns:1fr} .weather-bar{flex-direction:column;gap:10px;text-align:center} }
+.news-item { margin-bottom: 20px; padding: 15px; border-radius: 12px; }
+.news-item h4 { margin-bottom: 8px; }
+.link { color: #7c3aed; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+.link:hover { text-decoration: underline; }
+.footer { margin-top: 30px; text-align: center; color: rgba(255,255,255,0.7); padding: 20px; }
 </style>
 </head>
 <body>
@@ -47,49 +38,9 @@ tr:hover { background: #f8f9fa; }
 <h2 class="card-title"><span class="icon">📈</span> 行业动态 - 飞书行业报告</h2>
 
     <div class="industry-report">
-      <h3 style="color:#1a1a2e;margin-bottom:10px;">📄 行业报告 2026-03-15 - AI 制药设备管理 (全文双语版)</h3>
+      <h3 style="color:#1a1a2e;margin-bottom:10px;">📄 行业报告获取失败</h3>
       <div style="background:#f8f9fa;padding:15px;border-radius:8px;margin:15px 0;">
-        <pre style="white-space:pre-wrap;font-family:'Microsoft YaHei',sans-serif;font-size:0.9rem;line-height:1.6;color:#333;">
-**验证摘要**:
-- 搜索到的新闻总数：10 条
-- 成功提取全文：9 条 (90%)
-- 提取失败：1 条 (10%)
-- 时间范围：2026-03-09 ~ 2026-03-14
-
-**主要新闻**:
-1. **SCHMID Group 获得 AI 和 HPC 基础设施湿法工艺设备订单** (2026-03-11)
-   - 低两位数百万美元采购订单，用于 HDI 多层生产线
-   - 支持下一代 AI 服务器板和高性能计算 (HPC) 平台
-   - 股价当日上涨 +10.63%，市值增加约 3300 万美元
-
-2. **JVCKENWOOD 选择 IFS Cloud 实现全球制造运营现代化** (2026-03-12)
-   - 下一代 ERP 和 MES 平台，工业 AI 驱动
-   - 试点运营计划于 2027 年 4 月开始
-
-3. **AsymBio 完成双基地一中心网络布局** (2026-03-09)
-   - 上海奉贤商业生产基地正式投入运营
-   - 整合从早期研发到商业生产的端到端 CDMO 能力
-
-4. **药明生物获多项亚太生物制药卓越奖** (2026-03-13)
-   - 6 项企业奖和 2 项个人领导奖
-   - 数字孪生平台 PatroLab™ 带来约 40% 生产力提升
-
-**行业趋势**:
-- AI 驱动制造设备需求激增
-- 数字化转型从试点转向平台级
-- 端到端一体化服务能力
-- 质量与合规持续领先
-- 行业信心持续高涨（90% 乐观指数）
-
-**数据亮点**:
-| 指标 | 数值 |
-|------|------|
-| SCHMID 订单后股价涨幅 | +10.63% |
-| 药明生物综合项目数 | 945 个 |
-| EBR 生产力提升 | ~40% |
-| PPQ 活动成功率 | 100% |
-| 制造业乐观指数 | 90% |
-</pre>
+        <pre style="white-space:pre-wrap;font-family:'Microsoft YaHei',sans-serif;font-size:0.9rem;line-height:1.6;color:#333;">无法连接到飞书 API</pre>
       </div>
       <div class="link" style="margin-top:12px;">
         🔗 <a href="https://qig7up6duh.feishu.cn/drive/folder/UlnOfQaxslwjJVdKzBXc22DrnDc" target="_blank" style="color:#7c3aed;text-decoration:none;font-weight:600;">查看飞书文档全文 →</a>
@@ -309,7 +260,7 @@ tr:hover { background: #f8f9fa; }
 <div class="right-column">
 <div class="card">
 <h2 class="card-title"><span class="icon">💼</span> 工作汇总</h2>
-<div style="margin-bottom:20px;"><h3 style="color:#1a1a2e;font-size:1.1rem;margin-bottom:15px;">📅 最近工作</h3><div style="margin-bottom:15px;padding:12px;background:linear-gradient(135deg,#f8f9fa,#e9ecef);border-radius:8px;border-left:3px solid #7c3aed;"><div style="font-weight:600;color:#1a1a2e;margin-bottom:10px;font-size:0.95rem;">📌 2026-3-13 周五</div><div style="margin-bottom:8px;"><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• 质量目标签订</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• 分离信号干扰</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• CAPA-02524：地漏维修（已完成，待验收关闭）</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• CR-00381/EC：隔膜阀膜片更换周期优化（月底关闭）</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• 层流报告修订（待签字）</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• 赋码系统维修（已测试两批使用正常）</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• 配液 304-4 温度探头故障（待更换）</div></div><div style="margin-top:8px;padding:8px;background:rgba(124,58,237,0.1);border-radius:6px;"><div style="font-size:0.85rem;color:#7c3aed;font-weight:600;margin-bottom:4px;">📋 会议安排</div><div style="font-size:0.85rem;color:#555;">• 3 月 16 日 9:00 党风廉政建设和反腐败工作会议</div></div></div><div style="margin-bottom:15px;padding:12px;background:linear-gradient(135deg,#f8f9fa,#e9ecef);border-radius:8px;border-left:3px solid #7c3aed;"><div style="font-weight:600;color:#1a1a2e;margin-bottom:10px;font-size:0.95rem;">📌 2026-3-12 周四</div><div style="margin-bottom:8px;"><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• 灭菌柜培训（下午 2 点半 北京厅）</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• CAPA-02524：地漏维修（已完成）</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• CR-00381/EC：隔膜阀膜片更换周期（月底关闭）</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• 层流报告修订（待签字）</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• 工控机升级 (HOLD)</div></div></div><div style="margin-bottom:15px;padding:12px;background:linear-gradient(135deg,#f8f9fa,#e9ecef);border-radius:8px;border-left:3px solid #7c3aed;"><div style="font-weight:600;color:#1a1a2e;margin-bottom:10px;font-size:0.95rem;">📌 2026-3-11 周三</div><div style="margin-bottom:8px;"><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• 包装赋码跟踪</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• CAPA-02534: 文件更新（已完成）</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• CR-00381/EC：隔膜阀膜片更换周期（月底关闭）</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• 层流报告修订（待签字）</div><div style="font-size:0.85rem;color:#333;margin-bottom:4px;line-height:1.5;">• 工会会员代表大会（13:30 北京厅）</div></div></div></div><h3 style="color:#1a1a2e;font-size:1.1rem;margin-bottom:15px;">👥 人员安排</h3><table><tr><th>姓名</th><th>工作内容</th></tr><tr><td>李迪迪</td><td>委外流程</td></tr><tr><td>薛战魁</td><td>分装陪产，分离线槽检查</td></tr><tr><td>饶苇浩</td><td>配液探头</td></tr><tr><td>刘建明</td><td>现场巡检</td></tr><tr><td>皮富明</td><td>中班 层析探头校准</td></tr><tr><td>吴积辉</td><td>包装陪产</td></tr></table><div style="margin-top:20px;text-align:center;"><a href="https://qig7up6duh.feishu.cn/docx/Pheld8ii4ogEG4xkcoLcLO1Yn6i" target="_blank" style="font-size:0.85rem;color:#7c3aed;text-decoration:none;">查看飞书工作日志全文 →</a></div>
+<div style="margin-bottom:20px;"><h3 style="color:#1a1a2e;font-size:1.1rem;margin-bottom:15px;">📅 最近工作</h3><div style="color:#999;font-style:italic;">暂无工作日志数据</div></div>
 </div>
 </div>
 </div>
