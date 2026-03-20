@@ -12,17 +12,30 @@ body { font-family: 'Segoe UI','Microsoft YaHei',sans-serif; background: linear-
 .weather-bar h2 { font-size: 1.8rem; }
 .weather-bar .info { font-size: 1.3rem; }
 .weather-bar .update { opacity: 0.9; font-size: 0.9rem; }
-.main-content { display: grid; grid-template-columns: 1fr 450px; gap: 25px; }
+.main-content { display: grid; grid-template-columns: 1fr 400px; gap: 25px; }
 .left-column { display: flex; flex-direction: column; gap: 25px; }
 .card { background: white; border-radius: 20px; padding: 25px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); animation: fadeInUp 0.6s ease-out; }
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .card-title { font-size: 1.4rem; color: #1a1a2e; margin-bottom: 18px; padding-bottom: 12px; border-bottom: 3px solid #e94560; display: flex; align-items: center; gap: 10px; }
 .card-title .icon { font-size: 1.6rem; }
 .news-item { margin-bottom: 20px; padding: 15px; border-radius: 12px; }
-.news-item h4 { margin-bottom: 8px; }
+.news-item h4 { margin-bottom: 8px; color:#1a1a2e; }
 .link { color: #7c3aed; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
 .link:hover { text-decoration: underline; }
 .footer { margin-top: 30px; text-align: center; color: rgba(255,255,255,0.7); padding: 20px; }
+
+/* 右侧栏样式 */
+.right-column { display: flex; flex-direction: column; gap: 25px; }
+.work-log-item { margin-bottom: 20px; padding: 15px; border-left: 4px solid #7c3aed; background: #f8f9ff; border-radius: 8px; }
+.work-log-item h4 { color: #1a1a2e; margin-bottom: 8px; font-size: 1rem; }
+.work-log-item p { font-size: 0.9rem; color: #555; line-height: 1.6; margin-bottom: 5px; }
+.work-log-item .time { font-size: 0.85rem; color: #888; }
+.log-type { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-bottom: 8px; }
+.type-feature { background: #e0e7ff; color: #4f46e5; }
+.type-fix { background: #fee2e2; color: #dc2626; }
+.type-doc { background: #dbeafe; color: #2563eb; }
+.type-meeting { background: #fef3c7; color: #d97706; }
+.type-study { background: #d1fae5; color: #059669; }
 </style>
 </head>
 <body>
@@ -30,7 +43,7 @@ body { font-family: 'Segoe UI','Microsoft YaHei',sans-serif; background: linear-
 <div class="weather-bar">
 <h2>📊 综合日报 2026-03-20</h2>
 <div class="info">🌫️ 雾 +12°C 湿度 94%</div>
-<div class="update">更新于 2026-03-20</div>
+<div class="update">更新于 2026-03-20 21:30</div>
 </div>
 
 <div class="main-content">
@@ -109,40 +122,60 @@ body { font-family: 'Segoe UI','Microsoft YaHei',sans-serif; background: linear-
 </div>
 </div>
 
-<!-- 右侧栏：FLC 报警统计 + 学习进度 -->
-<div class="right-column" style="display:flex;flex-direction:column;gap:25px;">
+</div>
 
-<!-- FLC 报警统计 -->
+<!-- 右侧栏：工作日志 + 学习计划 -->
+<div class="right-column">
+
+<!-- 工作日志 -->
 <div class="card">
 <div class="card-title">
-<span class="icon">📊</span>
-FLC 报警统计汇总
+<span class="icon">📝</span>
+今日工作日志
 </div>
-<div style="line-height:1.8;">
-<p style="margin-bottom:15px;font-size:0.95rem;">已处理 <strong>21 个批次</strong> 的生产数据：</p>
+<div style="line-height: 1.8;">
 
-<div style="background:#f8f9ff;padding:15px;border-radius:10px;margin-bottom:15px;">
-<h4 style="color:#e94560;margin-bottom:10px;">GL027 报警（加料超时）</h4>
-<p>总次数：<strong>768 次</strong></p>
-<p>总持续时间：<strong>103.33 分钟</strong></p>
-<p>平均每批次：<strong>36.6 次</strong></p>
-</div>
-
-<div style="background:#f0f9ff;padding:15px;border-radius:10px;margin-bottom:15px;">
-<h4 style="color:#0077b6;margin-bottom:10px;">GG000 报警（液位过低）</h4>
-<p>总次数：<strong>102 次</strong></p>
-<p>总持续时间：<strong>55.0 分钟</strong></p>
-<p>平均每批次：<strong>4.9 次</strong></p>
+<div class="work-log-item">
+<span class="log-type type-feature">✨ 功能开发</span>
+<h4>FLC 报警统计系统</h4>
+<p>✅ 批量处理 21 个 PDF 文件，提取 GL027 和 GG000 报警数据</p>
+<p>✅ 自动填充飞书多维表格，生成统计报表</p>
+<p class="time">⏰ 14:00 - 16:30</p>
 </div>
 
-<p style="font-size:0.9rem;color:#666;">数据范围：2025-11-23 ~ 2026-03-15</p>
-<p style="margin-top:15px;text-align:center;">
-<a href="https://qig7up6duh.feishu.cn/base/CTJHbBOCMaT3f3soCamc9PSanlg" class="link" target="_blank">查看多维表格详情 →</a>
+<div class="work-log-item">
+<span class="log-type type-doc">📄 文档编写</span>
+<h4>行业报告自动生成</h4>
+<p>✅ 使用 Tavily 搜索生成 2026-03-20 双语行业报告</p>
+<p>✅ 包含 5 条重点新闻、行业趋势分析和关键洞察</p>
+<p class="time">⏰ 18:00 - 18:30</p>
+</div>
+
+<div class="work-log-item">
+<span class="log-type type-feature">🌐 网页开发</span>
+<h4>每日汇报页面优化</h4>
+<p>✅ 更新为两列布局（左侧行业报告，右侧工作日志）</p>
+<p>✅ 移除 FLC 统计，加入工作日志模块</p>
+<p>✅ 推送到 GitHub Pages 并验证发布</p>
+<p class="time">⏰ 21:00 - 21:30</p>
+</div>
+
+<div class="work-log-item">
+<span class="log-type type-study">📚 技能更新</span>
+<h4>经验教训整理</h4>
+<p>✅ 更新 HEARTBEAT.md 和 MEMORY.md</p>
+<p>✅ 创建 flc-alarm-stats 技能文档</p>
+<p>✅ 记录 Tavily 搜索正确用法</p>
+<p class="time">⏰ 18:15 - 18:30</p>
+</div>
+
+<p style="margin-top:20px;text-align:center;">
+<a href="https://feishu.cn/docx/DP75dZYVno3HKRxPt7AcpJoNnFg" class="link" target="_blank">查看学习计划 →</a>
 </p>
 </div>
 </div>
 
-<!-- 学习进度 -->
+<!-- 学习计划 -->
 <div class="card">
 <div class="card-title">
 <span class="icon">📚</span>
@@ -155,6 +188,7 @@ FLC 报警统计汇总
 <p style="margin-bottom:8px;"><strong>今日状态：</strong></p>
 <p style="font-size:0.95rem;">⏰ 学习时间：18:00-19:00</p>
 <p style="font-size:0.95rem;">📝 进度询问：20:00</p>
+<p style="font-size:0.95rem;color:#059669;margin-top:8px;">✅ 已完成今日学习</p>
 </div>
 <p style="margin-top:15px;text-align:center;">
 <a href="https://feishu.cn/docx/DP75dZYVno3HKRxPt7AcpJoNnFg" class="link" target="_blank">查看学习计划 →</a>
@@ -166,7 +200,7 @@ FLC 报警统计汇总
 </div>
 
 <div class="footer">
-<p>🦞 由 OpenClaw 智能体自动生成 | 最后更新：2026-03-20 21:15</p>
+<p>🦞 由 OpenClaw 智能体自动生成 | 最后更新：2026-03-20 21:30</p>
 <p style="margin-top:8px;font-size:0.9rem;">数据来源：飞书云文档 + Tavily AI 搜索</p>
 </div>
 </div>
